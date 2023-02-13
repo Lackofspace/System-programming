@@ -7,10 +7,10 @@ It works with .exe of taskSolution.cpp file (.cpp file can be compiled like: ```
 To run this code it is needed to create a file with a string longer than 1 symbol. Everything should be located in one place. There it can be run.
 Run: ```./windowsProcessApi.exe <filename> <N> <letter>```, where ```<N>``` is a number of subprocesses, which will divide the string to solve a task.
 
+### linux.cpp (for Linux)
+It is only needed to create file.txt, to compile linux.cpp file and run it.
+
 ### Example:
 I created file.txt and wrote there ```abcd efab XyZ```.
 I ran the program and the result is:
 ```There are 5 letters, which are after letter 'd' in alphabet```.
-
-### linux.cpp (for Linux)
-It is only need to compile linux.cpp file and run it.
