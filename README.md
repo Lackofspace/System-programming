@@ -5,7 +5,7 @@
 
 ### It works with .exe of taskSolution.cpp file (.cpp file can be compiled like: g++ <file.cpp>).
 ### To run this code it is needed to create a file with a string longer than 1 symbol. Everything should be located in one place. There it can be run.
-### Run: ./windowsProcessApi.exe <filename> <N> <letter>,
+### ```Run: ./windowsProcessApi.exe <filename> <N> <letter>```,
 ###     where <N> is a number of subprocesses, which will divide the string to solve a task
 
 ### Example:
