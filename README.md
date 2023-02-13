@@ -10,6 +10,10 @@ Run: ```./windowsProcessApi.exe <filename> <N> <letter>```, where ```<N>``` is a
 ### linux.cpp (for Linux)
 It is only needed to create file.txt, to compile linux.cpp file and run it.
 
+
+### cross-platformСode.py (for any OS)
+To run such script use: ```python cross-platformСode.py <filename> <N> <letter>```.
+
 ### Example:
 I created file.txt and wrote there ```abcd efab XyZ```.
 I ran the program and the result is:
