@@ -11,3 +11,6 @@ Run: ```./windowsProcessApi.exe <filename> <N> <letter>```, where ```<N>``` is a
 I created file.txt and wrote there ```abcd efab XyZ```.
 I ran the program and the result is:
 ```There are 5 letters, which are after letter 'd' in alphabet```.
+
+### linux.cpp (for Linux)
+It is only need to compile linux.cpp file and run it.
