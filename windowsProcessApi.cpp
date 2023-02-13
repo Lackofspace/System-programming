@@ -14,6 +14,7 @@ string read_string_from_file(const string& filename) {
         cerr << "Failed to open file: " << filename << endl;
         exit(1);
     }
+
     string line;
     getline(file, line);
     string letters;
@@ -40,19 +41,18 @@ int main(int argc, char *argv[]) {
     }
 
     int N = atoi(argv[2]);
-    string letter = argv[3];
-    std::transform(letter.begin(), letter.end(), letter.begin(),
-                   [](unsigned char c){ return std::tolower(c); });
+    char letter = tolower(argv[3][0]);
     vector<HANDLE> children(N);
-    int chunk_size = (int) stringLine.size() / N;
-    int rest = (int) stringLine.size() % N;
+    size_t chunk_size = stringLine.size() / N;
+    size_t rest = stringLine.size() % N;
+    const char* fileExe = "a.exe ";
 
-    for (int i = 0; i < N; ++i) {
-        int start = i * chunk_size + min(i, rest);
-        int end = start + chunk_size + (i < rest);
+    for (size_t i = 0; i < N; ++i) {
+        size_t start = i * chunk_size + min(i, rest);
+        size_t end = start + chunk_size + (i < rest);
         STARTUPINFO si = {0};
         string str = stringLine.substr(start, end - start);
-        string lpCommandLine = "a.exe " + str + " " + letter;
+        string lpCommandLine = fileExe + str + " " + letter;
         PROCESS_INFORMATION pi = {nullptr};
 
         if (!CreateProcess(nullptr,
