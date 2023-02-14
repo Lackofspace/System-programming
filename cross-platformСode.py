@@ -6,7 +6,7 @@ from multiprocessing import Process, Queue
 def count_characters(start, end, search_char, string, result_queue):
     count = 0
     for i in range(start, end):
-        if ord(string[i]) > ord(search_char):
+        if ord(string[i]) > ord(search_char) and string[i].isalpha():
             count += 1
     result_queue.put(count)
 
